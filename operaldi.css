@@ -163,8 +163,8 @@ input[type=checkbox]:after {
 #browser.win:not(.is-settingspage):not(.address-top)>#header,
 #browser.win:not(.is-settingspage):not(.tabs-top) #header,
 #browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
-    min-height: 34px !important;
-    height: 34px !important;
+    min-height: 30px !important;
+    height: 30px !important;
     background: var(--colortabbar);
     padding: 0px 0px 0px 0px;
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
