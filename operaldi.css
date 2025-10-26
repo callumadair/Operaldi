@@ -491,7 +491,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 div#main.right #panels-container {
     padding-bottom: 5px;
     /* MORE SPACE UNDER SETTINGS ICON */
-    min-width: 34px;
+    min-width: 44px;
     /* FIXING SIDEBAR PART 1 */
 }
 
@@ -509,9 +509,8 @@ div#main.right #panels-container {
 #panels-container {
     /*FIXING SIDEBAR PART 3 */
     background-color: transparent;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 0 5px 5px 5px;
+    min-width: 44px;
 }
 
 #panels-container.right:not(.icons) .panel-group,
