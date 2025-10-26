@@ -326,7 +326,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 }
 
 #browser.fullscreen #tabs-tabbar-container {
-    margin: 0px 0px 5px 5px;
+    margin: 0px 0px 0px 0px;
 }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
@@ -926,7 +926,7 @@ button.circular {
 
 /* INNER ROUND BORDERS */
 
-#browser:not(.fullscreen) #webpage-stack {
+#browser #webpage-stack {
     border-radius: var(--radius);
     margin: 0px 5px 5px 5px;
 }
