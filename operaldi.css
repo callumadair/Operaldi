@@ -431,7 +431,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 }
 
 #tabs-tabbar-container {
-    padding: 0px;
+    padding: 3px;
     /* ADDING SPACE NEXT TO TABS */
 }
 
