@@ -163,15 +163,16 @@ input[type=checkbox]:after {
 #browser.win:not(.is-settingspage):not(.address-top)>#header,
 #browser.win:not(.is-settingspage):not(.tabs-top) #header,
 #browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
-    min-height: 24px !important;
-    height: 24px !important;
+    min-height: 34px !important;
+    height: 34px !important;
     background: var(--colortabbar);
-    padding: 0px 5px 0px 5px;
+    padding: 0px 0px 0px 0px;
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 #browser.win #titlebar #pagetitle {
     height: var(--win-header);
-    padding: 30px 140px;
+    padding: 10px 140px;
 }
 
 /*topHeader-Linux-Win*/
