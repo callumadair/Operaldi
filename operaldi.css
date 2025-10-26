@@ -194,18 +194,18 @@ input[type=checkbox]:after {
 
 #browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
 #browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
-    min-height: calc(44px / var(--uiZoomLevel));
+    min-height: calc(40px / var(--uiZoomLevel));
     /* HEIGHT OF MAINBAR */
 }
 
 .density-on .UrlBar-SearchField,
 .density-on .UrlBar-AddressField {
-    height: 34px;
+    height: 30px;
     /* HEIGHT OF URL BAR */
 }
 
 .disable-titlebar#browser.win .window-buttongroup {
-    height: 44px;
+    height: 40px;
     /* HEIGHT OF WINDOW BUTTONS */
 }
 
@@ -214,8 +214,8 @@ input[type=checkbox]:after {
     /* BG COLOR OF WHOLE MAINBAR */
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
-    margin: 0px 0px 5px 0px;
-    /* border-radius: var(--radius); */
+    margin: 5px;
+    border-radius: var(--radius);
     z-index: 10;
 }
 
@@ -373,7 +373,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 }
 
 #browser.fullscreen #tabs-tabbar-container {
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
@@ -498,7 +498,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 .tabs-left #tabs-container .toolbar-tabbar-after,
 .tabs-right #tabs-container .toolbar-tabbar-after {
     /* ADJUSTING ICONS UNDER TABS */
-    margin-bottom: 5px;
+    margin: 10px 0px;
 }
 
 #tabs-container .toolbar-tabbar-before>div>.button-toolbar>button,
