@@ -148,18 +148,18 @@ input[type=checkbox]:after {
 
 #browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
 #browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
-    min-height: calc(44px / var(--uiZoomLevel));
+    min-height: calc(34px / var(--uiZoomLevel));
     /* HEIGHT OF MAINBAR */
 }
 
 .density-on .UrlBar-SearchField,
 .density-on .UrlBar-AddressField {
-    height: 34px;
+    height: 24px;
     /* HEIGHT OF URL BAR */
 }
 
 .disable-titlebar#browser.win .window-buttongroup {
-    height: 44px;
+    height: 34px;
     /* HEIGHT OF WINDOW BUTTONS */
 }
 
@@ -485,7 +485,7 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 div#main.right #panels-container {
     padding-bottom: 5px;
     /* MORE SPACE UNDER SETTINGS ICON */
-    min-width: 44px;
+    min-width: 34px;
     /* FIXING SIDEBAR PART 1 */
 }
 
