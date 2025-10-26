@@ -510,7 +510,7 @@ div#main.right #panels-container {
 #panels-container {
     /*FIXING SIDEBAR PART 3 */
     background-color: transparent;
-    margin: 0 5px 5px 5px;
+    margin: 0px 0px 5px 5px;
     min-width: 44px;
 }
 
