@@ -178,6 +178,7 @@ input[type=checkbox]:after {
     /* REMOVING MARGIN FROM MAINBAR WHEN IN FULLSCREEN */
     margin-bottom: 5px;
     border-radius: 0px;
+    padding: 0px 5px 0px;
 }
 
 .SearchField,
