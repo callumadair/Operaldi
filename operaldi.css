@@ -144,6 +144,51 @@ input[type=checkbox]:after {
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
+/* HEADER for when the MAINBAR is collapsed. */
+#browser:not(.is-settingspage):not(.address-top)>#header,
+#browser:not(.is-settingspage):not(.tabs-top) #header,
+#browser.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
+    box-shadow: none;
+    overflow: visible;
+}
+
+#browser:not(.is-settingspage).fullscreen>#header,
+#browser:not(.is-settingspage):not(.address-top).tabs-bottom>#header,
+#browser:not(.is-settingspage).tabs-off.address-top>#header,
+.color-behind-tabs-off:not(.is-settingspage)#browser.tabs-bottom #header {
+    display: none;
+}
+
+/*topHeader-Win*/
+#browser.win:not(.is-settingspage):not(.address-top)>#header,
+#browser.win:not(.is-settingspage):not(.tabs-top) #header,
+#browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
+    min-height: 24px !important;
+    height: 24px !important;
+    background: var(--colortabbar);
+    padding: 0px 5px 0px 5px;
+}
+
+#browser.win #titlebar #pagetitle {
+    height: var(--win-header);
+    padding: 30px 140px;
+}
+
+/*topHeader-Linux-Win*/
+.linux:not(.alt) #titlebar #pagetitle,
+#browser.win #titlebar #pagetitle,
+#browser.mac #titlebar #pagetitle {
+    font-size: 11px;
+    color: var(--colorFg);
+    opacity: 0.5;
+}
+
+.win #titlebar #pagetitle>span,
+.linux:not(.alt) #titlebar #pagetitle>span {
+    text-align: center;
+}
+
+
 /* MAINBAR */
 
 #browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
