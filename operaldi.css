@@ -18,106 +18,154 @@ moooooooooooožnááá:
 arc like pinned taby?
 horizontal tabs?? #tabs-tabbar-container.left
 
-*/ 
+*/
 
 :root {
-    --lessTransparent: transparent 50%; /* TRANSPARENCY OF BROWSER - 50% */
-    --blur: blur(15px); /* BLUR OF BROWSER */
+    --lessTransparent: transparent 50%;
+    /* TRANSPARENCY OF BROWSER - 50% */
+    --blur: blur(15px);
+    /* BLUR OF BROWSER */
 }
 
 /* SETTINGS OF ALL INPUTS */
 
-select:not(.sortselector-dropdown) { /* ADJUSTING SELECTS IN MANY WINDOWS ETC */
+select:not(.sortselector-dropdown) {
+    /* ADJUSTING SELECTS IN MANY WINDOWS ETC */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)) !important;
     border-color: transparent;
 }
 
-input[type=button]:not(.circular) { /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
+input[type=button]:not(.circular) {
+    /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
     background-image: none;
 }
 
-input[type=button]:not(.circular).primary { /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary {
+    /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     border-color: transparent;
 }
 
-input[type=button]:not(.circular).primary:hover { /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary:hover {
+    /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     background: var(--colorBg) !important;
     border-color: transparent;
 }
 
 :focus-visible {
-    outline: none; /* REMOVING OUTLINE FROM FOCUSED SEARCH BAR */
+    outline: none;
+    /* REMOVING OUTLINE FROM FOCUSED SEARCH BAR */
 }
 
-input[type=tel], input[type=text], input[type=search], input[type=email], input[type=url], input[type=date], input[type=time], input[type=password], input[type=number] {
-    box-shadow: none; /* REMOVE SHADOW FROM SEARCH BAR */
+input[type=tel],
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=time],
+input[type=password],
+input[type=number] {
+    box-shadow: none;
+    /* REMOVE SHADOW FROM SEARCH BAR */
 }
 
-input, input[type=search], input[type=password], input[type=email], input[type=url], input[type=number], input[type=radio], input[type=date], input[type=time], input[type=checkbox], input[type=button], input[type=submit] {
-    border-color: transparent; /* REMOVE BORDER FROM SEARCH BAR */
+input,
+input[type=search],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=number],
+input[type=radio],
+input[type=date],
+input[type=time],
+input[type=checkbox],
+input[type=button],
+input[type=submit] {
+    border-color: transparent;
+    /* REMOVE BORDER FROM SEARCH BAR */
 }
 
-input[type=radio], input[type=checkbox] {
-    box-shadow: none; /* REMOVE SHADOW FROM CHECKBOX LIGHT MODE */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+input[type=radio],
+input[type=checkbox] {
+    box-shadow: none;
+    /* REMOVE SHADOW FROM CHECKBOX LIGHT MODE */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.theme-dark input[type=radio], .theme-dark input[type=checkbox] {
-    background-image: none; /* REMOVE SHADOW FROM CHECKBOX DARK MODE */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.theme-dark input[type=radio],
+.theme-dark input[type=checkbox] {
+    background-image: none;
+    /* REMOVE SHADOW FROM CHECKBOX DARK MODE */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-input[type=checkbox]:checked { /* BG COLOR OF CHECKED CHECKBOX */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+input[type=checkbox]:checked {
+    /* BG COLOR OF CHECKED CHECKBOX */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-input[type=radio]:checked, input[type=checkbox]:checked { /* BORDER COLOR OF CHECKED CHECKBOX */
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    /* BORDER COLOR OF CHECKED CHECKBOX */
     border-color: transparent;
 }
 
-input[type=checkbox]:before, input[type=checkbox]:after { /* COLOR OF ICON IN CHECKBOX */
+input[type=checkbox]:before,
+input[type=checkbox]:after {
+    /* COLOR OF ICON IN CHECKBOX */
     background-color: var(--colorFg);
 }
 
 /* SETTINGS OF ALL MODAL WINDOWS */
 
-#modal-bg.slide:not(.float) > div { /* FIXING BORDER RADIUS */
+#modal-bg.slide:not(.float)>div {
+    /* FIXING BORDER RADIUS */
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
-#modal-bg .modal-wrapper { /* BG COLOR */
-    background-color:  color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+
+#modal-bg .modal-wrapper {
+    /* BG COLOR */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     border-radius: var(--radius);
 }
 
-#modal-bg { /* ADDING A BIT OF SPACE ABOVE MODAL */
+#modal-bg {
+    /* ADDING A BIT OF SPACE ABOVE MODAL */
     margin: 6px auto;
 }
 
-#modal-bg input { /* BG COLOR OF MODAL INPUT */
+#modal-bg input {
+    /* BG COLOR OF MODAL INPUT */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 /* MAINBAR */
 
-#browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar), #browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
-    min-height: calc(44px / var(--uiZoomLevel)); /* HEIGHT OF MAINBAR */
+#browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
+#browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
+    min-height: calc(44px / var(--uiZoomLevel));
+    /* HEIGHT OF MAINBAR */
 }
 
-.density-on .UrlBar-SearchField, .density-on .UrlBar-AddressField {
-    height: 34px; /* HEIGHT OF URL BAR */
+.density-on .UrlBar-SearchField,
+.density-on .UrlBar-AddressField {
+    height: 34px;
+    /* HEIGHT OF URL BAR */
 }
 
 .disable-titlebar#browser.win .window-buttongroup {
-    height: 44px; /* HEIGHT OF WINDOW BUTTONS */
+    height: 44px;
+    /* HEIGHT OF WINDOW BUTTONS */
 }
 
 .mainbar {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF WHOLE MAINBAR */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF WHOLE MAINBAR */
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     margin: 5px;
@@ -126,237 +174,324 @@ input[type=checkbox]:before, input[type=checkbox]:after { /* COLOR OF ICON IN CH
 }
 
 #browser.fullscreen .mainbar {
-    margin: 0px /* REMOVING MARGIN FROM MAINBAR WHEN IN FULLSCREEN */
+    margin: 0px
+        /* REMOVING MARGIN FROM MAINBAR WHEN IN FULLSCREEN */
 }
 
-.SearchField, .UrlBar-AddressField { /* SEARCHBAR SETTINGS */
+.SearchField,
+.UrlBar-AddressField {
+    /* SEARCHBAR SETTINGS */
     border: none !important;
     background-color: transparent;
 }
 
-.SearchField:hover, .UrlBar-AddressField:hover { /* HOVER OF SEARCHBAR */
+.SearchField:hover,
+.UrlBar-AddressField:hover {
+    /* HOVER OF SEARCHBAR */
     background-color: var(--colorBg);
 }
 
-.color-behind-tabs-on .SearchField:focus-within, .color-behind-tabs-on .MailSearchField-Inner:focus-within, .color-behind-tabs-on .UrlBar-AddressField:focus-within {
-    outline: none; /* REMOVE OF SEARCHBAR BORDER WHEN IN FOCUS */
+.color-behind-tabs-on .SearchField:focus-within,
+.color-behind-tabs-on .MailSearchField-Inner:focus-within,
+.color-behind-tabs-on .UrlBar-AddressField:focus-within {
+    outline: none;
+    /* REMOVE OF SEARCHBAR BORDER WHEN IN FOCUS */
     background-color: var(--colorBg);
 }
 
 .UrlFragment-Wrapper--ShouldHighlight {
-    --HighlightColor: var(--colorFg); /* FONT COLOR OF www.GOOGLE.com */
-    --LowlightColor: var(--colorFg); /* FONT COLOR OF WWW.google.COM */
+    --HighlightColor: var(--colorFg);
+    /* FONT COLOR OF www.GOOGLE.com */
+    --LowlightColor: var(--colorFg);
+    /* FONT COLOR OF WWW.google.COM */
 }
 
 .address-top .mainbar {
-    border-bottom: none; /* REMOVE BORDER UNDER MAINBAR */
+    border-bottom: none;
+    /* REMOVE BORDER UNDER MAINBAR */
 }
 
-.mainbar button:hover { /* HOVER OF MAINBAR BUTTONS */
+.mainbar button:hover {
+    /* HOVER OF MAINBAR BUTTONS */
     background-color: var(--colorBg);
 }
 
-#browser:not(.tabs-top) .vivaldi:hover, #browser:not(.tabs-top) .vivaldi:focus-visible { /* HOVER OF HAMBURGER BUTTON */
+#browser:not(.tabs-top) .vivaldi:hover,
+#browser:not(.tabs-top) .vivaldi:focus-visible {
+    /* HOVER OF HAMBURGER BUTTON */
     background-color: var(--colorBg);
 }
 
 .disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi {
-    margin: 0 5px; /* REDUCING SPACE NEXT TO HAMBURGER */
+    margin: 0 5px;
+    /* REDUCING SPACE NEXT TO HAMBURGER */
 }
 
-button.ToolbarButton-Button[name="TilingToggle"] { /* FIXING SPACE NEXT TO TAB TILING ICON */
+button.ToolbarButton-Button[name="TilingToggle"] {
+    /* FIXING SPACE NEXT TO TAB TILING ICON */
     margin-left: 3px;
     margin-right: 4px;
 }
 
-.toolbar > .button-toolbar.button-on, .toolbar > .toolbar-group .button-toolbar.button-on, .toolbar > .button-toolbar > .button-on.button-on, .toolbar > .toolbar-group .button-toolbar > .button-on.button-on {
-    fill: var(--colorFg); /* CHANGING COLOR FROM HIGHLIGHT */
+.toolbar>.button-toolbar.button-on,
+.toolbar>.toolbar-group .button-toolbar.button-on,
+.toolbar>.button-toolbar>.button-on.button-on,
+.toolbar>.toolbar-group .button-toolbar>.button-on.button-on {
+    fill: var(--colorFg);
+    /* CHANGING COLOR FROM HIGHLIGHT */
     color: var(--colorFg);
 }
 
-.color-behind-tabs-on .toolbar-mainbar .toolbar-extensions > .button-toolbar > button.button-pressed, .color-behind-tabs-on .toolbar-mainbar .page-zoom-controls > .button-toolbar > button.button-pressed, .color-behind-tabs-on .toolbar-mainbar > .button-toolbar > button.button-pressed {
-    background-image: linear-gradient(var(--colorBg),var(--colorBg)); /* CHANGE COLOR WHEN ICON IS ACTIVE */
+.color-behind-tabs-on .toolbar-mainbar .toolbar-extensions>.button-toolbar>button.button-pressed,
+.color-behind-tabs-on .toolbar-mainbar .page-zoom-controls>.button-toolbar>button.button-pressed,
+.color-behind-tabs-on .toolbar-mainbar>.button-toolbar>button.button-pressed {
+    background-image: linear-gradient(var(--colorBg), var(--colorBg));
+    /* CHANGE COLOR WHEN ICON IS ACTIVE */
 }
 
 #browser.win .window-buttongroup button:hover {
-    background-color: var(--colorBg); /* HOVER OF WINDOW BUTTONS LIGHT THEME*/
+    background-color: var(--colorBg);
+    /* HOVER OF WINDOW BUTTONS LIGHT THEME*/
 }
 
 .theme-dark#browser.win .window-buttongroup button:hover {
-    background-color: var(--colorBg); /* HOVER OF WINDOW BUTTONS DARK THEME */
+    background-color: var(--colorBg);
+    /* HOVER OF WINDOW BUTTONS DARK THEME */
 }
 
 #browser.win .window-buttongroup button.window-close:hover {
-    background-color: var(--colorBg); /* HOVER OF WINDOW CLOSE BUTTON */
+    background-color: var(--colorBg);
+    /* HOVER OF WINDOW CLOSE BUTTON */
     fill: var(--colorFg);
 }
 
-#browser.win .window-buttongroup button.window-close { /* ADJUSTING CLOSE WINDOW BUTTON */
+#browser.win .window-buttongroup button.window-close {
+    /* ADJUSTING CLOSE WINDOW BUTTON */
     border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
 }
 
-.button-toolbar > button { /* HOVER OF ICONS IN URL */
+.button-toolbar>button {
+    /* HOVER OF ICONS IN URL */
     border: none;
 }
 
-.BookmarkButton:hover { /* HOVER OF BOOKMARK BUTTON IN URL */
+.BookmarkButton:hover {
+    /* HOVER OF BOOKMARK BUTTON IN URL */
     border-color: transparent;
 }
 
 /* WORKSPACES */
 
-.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar, .color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar, .color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar:hover, .color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar:hover {
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small)>.button-toolbar,
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small)>div>.button-toolbar,
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small)>.button-toolbar:hover,
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small)>div>.button-toolbar:hover {
     color: var(--colorFg);
     margin-top: 6px;
-} /* ADJUSTING WORKSPACE BUTTON */
-
-.tabs-left .button-toolbar.workspace-popup.tabbar-workspace-button, .tabs-right .button-toolbar.workspace-popup.tabbar-workspace-button {
-    background-color: transparent; /* BG OF WORKSPACE BUTTON */
 }
 
-#tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar > button:active, #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar > button:active, #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover, #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover {
-    background-color: var(--colorBg); /* HOVER OF WORKSPACES */
+/* ADJUSTING WORKSPACE BUTTON */
+
+.tabs-left .button-toolbar.workspace-popup.tabbar-workspace-button,
+.tabs-right .button-toolbar.workspace-popup.tabbar-workspace-button {
+    background-color: transparent;
+    /* BG OF WORKSPACE BUTTON */
 }
 
-.tabs-left #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-before, .tabs-left #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-after, .tabs-right #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-before, .tabs-right #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-after {
-    padding: 0px 0px 3px 6px; /* FIXING SPACE WHEN MANY TABS */
+#tabs-tabbar-container .toolbar:not(.toolbar-small)>.button-toolbar>button:active,
+#tabs-tabbar-container .toolbar:not(.toolbar-small)>div>.button-toolbar>button:active,
+#tabs-tabbar-container .toolbar:not(.toolbar-small)>.button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible)>button:not([disabled]):hover,
+#tabs-tabbar-container .toolbar:not(.toolbar-small)>div>.button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible)>button:not([disabled]):hover {
+    background-color: var(--colorBg);
+    /* HOVER OF WORKSPACES */
+}
+
+.tabs-left #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-before,
+.tabs-left #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-after,
+.tabs-right #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-before,
+.tabs-right #tabs-container:has(.tab-strip.overflow) .toolbar-tabbar-after {
+    padding: 0px 0px 3px 6px;
+    /* FIXING SPACE WHEN MANY TABS */
 }
 
 /* TABS */
 
-#browser .tabbar-wrapper, #browser.tabs-top #header {
-    background-color: transparent; /* BG COLOR OF TAB BAR PART 1 */
+#browser .tabbar-wrapper,
+#browser.tabs-top #header {
+    background-color: transparent;
+    /* BG COLOR OF TAB BAR PART 1 */
 }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF TAB BAR PART 2 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF TAB BAR PART 2 */
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     margin-left: 5px;
     border-radius: var(--radius);
 }
 
-.tabs-left .tabbar-wrapper { /* BG COLOR OF TAB BAR PART 3 */
+.tabs-left .tabbar-wrapper {
+    /* BG COLOR OF TAB BAR PART 3 */
     margin-bottom: 5px;
 }
 
 .color-behind-tabs-on .tab {
-    color: var(--colorFg); /* FONT COLOR OF NON ACTIVE TAB */
+    color: var(--colorFg);
+    /* FONT COLOR OF NON ACTIVE TAB */
 }
 
 .density-on .tab.active:not(.tab-in-accordion, .tab-accordion) {
-    box-shadow: none; /* REMOVE SHADOW UNDER ACTIVE TAB */
+    box-shadow: none;
+    /* REMOVE SHADOW UNDER ACTIVE TAB */
 }
 
-.tabs-left .tab-audio, .tabs-right .tab-audio { /* AUDIO ICON */
-    margin-left: 5px; 
+.tabs-left .tab-audio,
+.tabs-right .tab-audio {
+    /* AUDIO ICON */
+    margin-left: 5px;
     margin-top: -1px;
 }
 
-.separator hr { /* ADJUSTING SEPARATOR UNDER PINNED TABS */
+.separator hr {
+    /* ADJUSTING SEPARATOR UNDER PINNED TABS */
     border: 1px solid color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     background: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     opacity: 0.2;
     width: 100%;
     margin-top: 6px;
-} 
+}
 
-@media not (prefers-contrast: more) { /* HIDE TAB SCROLLBAR */
+@media not (prefers-contrast: more) {
+
+    /* HIDE TAB SCROLLBAR */
     ::-webkit-scrollbar {
-      display: none;
+        display: none;
     }
 }
 
-#tabs-container.left:has(.tab-strip.overflow), #tabs-container.right:has(.tab-strip.overflow) {
-    padding-right: 6px; /* FIXING SPACE NEXT TO TAB WHEN MANY TABS */
+#tabs-container.left:has(.tab-strip.overflow),
+#tabs-container.right:has(.tab-strip.overflow) {
+    padding-right: 6px;
+    /* FIXING SPACE NEXT TO TAB WHEN MANY TABS */
 }
 
 #tabs-tabbar-container {
-    padding: 0px;  /* ADDING SPACE NEXT TO TABS */
+    padding: 0px;
+    /* ADDING SPACE NEXT TO TABS */
 }
 
-#browser.color-behind-tabs-on .tab.active.active { /* BG OF ACTIVE TAB */
+#browser.color-behind-tabs-on .tab.active.active {
+    /* BG OF ACTIVE TAB */
     background-color: var(--colorBg);
 }
 
-#tabs-container .tab:not(.tab-group,.tab.active):hover { /* HOVER OF TABS PART 1 */
+#tabs-container .tab:not(.tab-group, .tab.active):hover {
+    /* HOVER OF TABS PART 1 */
     background-color: var(--colorBg);
 }
 
-.color-behind-tabs-on .tab-wrapper:hover .tab:not(.active) { /* HOVER OF TABS PART 2 */
+.color-behind-tabs-on .tab-wrapper:hover .tab:not(.active) {
+    /* HOVER OF TABS PART 2 */
     background-color: transparent;
 }
 
-#browser:not(.theme-dark) #tabs-tabbar-container.left { /* HIDE WEIRD BORDER BETWEEN TAB SECTION AND WEB PAGE */
+#browser:not(.theme-dark) #tabs-tabbar-container.left {
+    /* HIDE WEIRD BORDER BETWEEN TAB SECTION AND WEB PAGE */
     box-shadow: none;
 }
 
 .tab.active .favicon {
-    filter: none !important; /* HIDE FAVICON WHITE BORDER */
+    filter: none !important;
+    /* HIDE FAVICON WHITE BORDER */
 }
 
 #browser .tab-position.colored .tab:not(.active) {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));  /* BG COLOR OF TAB GROUP  */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF TAB GROUP  */
     color: var(--colorFg);
 }
 
-#browser .tab-position.colored.accordion-toggle-arrow:hover, #browser .tab-position.colored .tab:not(.active):hover {
-    background-color: var(--colorBg);  /* BG COLOR OF HOVER TAB IN GROUP */ 
+#browser .tab-position.colored.accordion-toggle-arrow:hover,
+#browser .tab-position.colored .tab:not(.active):hover {
+    background-color: var(--colorBg);
+    /* BG COLOR OF HOVER TAB IN GROUP */
 }
 
-#browser .tab-position.colored.accordion-toggle-arrow, #browser .tab-position.colored .tab.active {
-    background-color: var(--colorBg);  /* BG COLOR OF ACTIVE TAB IN GROUP */ 
-} 
+#browser .tab-position.colored.accordion-toggle-arrow,
+#browser .tab-position.colored .tab.active {
+    background-color: var(--colorBg);
+    /* BG COLOR OF ACTIVE TAB IN GROUP */
+}
 
-#browser .tab-position.colored.accordion-toggle-arrow { /* ARROW SETTINGS */
+#browser .tab-position.colored.accordion-toggle-arrow {
+    /* ARROW SETTINGS */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     color: var(--colorFg);
 }
 
-#browser .tab-position.colored .tab:not(.marked) + svg .stack-frame {
-    stroke: transparent; /* BORDER COLOR OF TAB GROUP */
+#browser .tab-position.colored .tab:not(.marked)+svg .stack-frame {
+    stroke: transparent;
+    /* BORDER COLOR OF TAB GROUP */
 }
 
 #browser .tab-position.colored .stack-counter {
-    background-color: var(--colorHighlightBgDark); /* BG COLOR OF TAB GROUP NUMBER */
+    background-color: var(--colorHighlightBgDark);
+    /* BG COLOR OF TAB GROUP NUMBER */
     color: var(--colorAccentBg);
 }
 
-.tabs-left #tabs-container .toolbar-tabbar-after, .tabs-right #tabs-container .toolbar-tabbar-after { /* ADJUSTING ICONS UNDER TABS */
+.tabs-left #tabs-container .toolbar-tabbar-after,
+.tabs-right #tabs-container .toolbar-tabbar-after {
+    /* ADJUSTING ICONS UNDER TABS */
     margin-bottom: 5px;
 }
 
-#tabs-container .toolbar-tabbar-before > div > .button-toolbar > button, #tabs-container .toolbar-tabbar-after > div > .button-toolbar > button, #tabs-container .toolbar-tabbar-before > .button-toolbar > button, #tabs-container .toolbar-tabbar-after > .button-toolbar > button {
+#tabs-container .toolbar-tabbar-before>div>.button-toolbar>button,
+#tabs-container .toolbar-tabbar-after>div>.button-toolbar>button,
+#tabs-container .toolbar-tabbar-before>.button-toolbar>button,
+#tabs-container .toolbar-tabbar-after>.button-toolbar>button {
     height: 34px;
     min-width: 34px;
-} /* BIGGER HOVER EFFECT OF TRASH AND CLOUD ICONS */
+}
 
-#tabs-tabbar-container .toolbar-tabbar-after { /* MOVING ALL ICONS UNDER TABS TO END OF FLEX */
+/* BIGGER HOVER EFFECT OF TRASH AND CLOUD ICONS */
+
+#tabs-tabbar-container .toolbar-tabbar-after {
+    /* MOVING ALL ICONS UNDER TABS TO END OF FLEX */
     align-content: flex-end;
 }
 
 #tabs-tabbar-container .toolbar-tabbar-after {
-    gap: 4px; /* ADJUSTING GAP BETWEEN ICONS */
+    gap: 4px;
+    /* ADJUSTING GAP BETWEEN ICONS */
 }
 
 /* SIDEBAR */
 
 #switch {
-    padding-top: 5px; /* ADJUSTING SPACE ABOVE SIDEBAR ICONS */
+    padding-top: 5px;
+    /* ADJUSTING SPACE ABOVE SIDEBAR ICONS */
 }
 
-.toolbar, .toolbar-group, .toolbar-wrap {
-    gap: 5px; /* ADJUSTING GAP BETWEEN ICONS */
+.toolbar,
+.toolbar-group,
+.toolbar-wrap {
+    gap: 5px;
+    /* ADJUSTING GAP BETWEEN ICONS */
 }
 
 div#main.right #panels-container {
-    padding-bottom: 5px; /* MORE SPACE UNDER SETTINGS ICON */
-    min-width: 44px; /* FIXING SIDEBAR PART 1 */
+    padding-bottom: 5px;
+    /* MORE SPACE UNDER SETTINGS ICON */
+    min-width: 44px;
+    /* FIXING SIDEBAR PART 1 */
 }
 
-.density-on #switch { /* FIXING SIDEBAR PART 2 + ADJUSTING */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.density-on #switch {
+    /* FIXING SIDEBAR PART 2 + ADJUSTING */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     border-radius: var(--radius);
@@ -365,327 +500,420 @@ div#main.right #panels-container {
     min-width: 44px;
 }
 
-#panels-container { /*FIXING SIDEBAR PART 3 */
+#panels-container {
+    /*FIXING SIDEBAR PART 3 */
     background-color: transparent;
     margin-right: 5px;
 }
 
-#panels-container.right:not(.icons) .panel-group, #panels-container.right.icons:not(:has(.SlideBar)) {
-    border-left: none; /* HIDE WEIRD BORDER IN SIDEBAR */
+#panels-container.right:not(.icons) .panel-group,
+#panels-container.right.icons:not(:has(.SlideBar)) {
+    border-left: none;
+    /* HIDE WEIRD BORDER IN SIDEBAR */
 }
 
 .ExtensionToggleIcon.ExtensionToggleIcon--Expanded {
-    background-color: transparent; /* TRANSPARENT BG COLOR FROM EXTENSION BUTTON */
+    background-color: transparent;
+    /* TRANSPARENT BG COLOR FROM EXTENSION BUTTON */
 }
 
-.ExtensionIcon--Hidden { /* ADJUSTING HIDDEN EXTENSIONS */
+.ExtensionIcon--Hidden {
+    /* ADJUSTING HIDDEN EXTENSIONS */
     background-color: transparent;
 }
 
-#panels-container button:hover { /* HOVER OF BUTTONS ON SIDEBAR */
+#panels-container button:hover {
+    /* HOVER OF BUTTONS ON SIDEBAR */
     background-color: var(--colorBg);
 }
 
-.ExtensionIcon--Hidden:hover, .ExtensionIcon--Hidden:active { /* HOVER OF HIDDEN EXTENSIONS */
+.ExtensionIcon--Hidden:hover,
+.ExtensionIcon--Hidden:active {
+    /* HOVER OF HIDDEN EXTENSIONS */
     background-color: var(--colorBg);
     border-radius: var(--radius);
 }
 
-.density-on#browser .toolbar-vertical .button-toolbar:not(:last-of-type) { /* ADJUSTING HIDDEN EXTENSIONS HOVER */
+.density-on#browser .toolbar-vertical .button-toolbar:not(:last-of-type) {
+    /* ADJUSTING HIDDEN EXTENSIONS HOVER */
     padding-bottom: 0px;
     height: 34px;
 }
 
-.toolbar-panel > .button-toolbar > button.button-pressed, .toolbar-panel .toolbar-extensions .button-toolbar > button.button-pressed, .toolbar-panel .page-zoom-controls .button-toolbar > button.button-pressed {
-    background-color: var(--colorBg); /* CHANGING BG COLOR AND ICON COLOR WHEN DOWNLOAD ICON IS ACTIVE */
+.toolbar-panel>.button-toolbar>button.button-pressed,
+.toolbar-panel .toolbar-extensions .button-toolbar>button.button-pressed,
+.toolbar-panel .page-zoom-controls .button-toolbar>button.button-pressed {
+    background-color: var(--colorBg);
+    /* CHANGING BG COLOR AND ICON COLOR WHEN DOWNLOAD ICON IS ACTIVE */
 }
 
-.density-on #switch .addwebpanel-wrapper > button.active button, .density-on #switch > .button-toolbar.active button, .density-on #switch > * > .button-toolbar.active button, .density-on #switch > button.active button {
-    background-color: var(--colorBg); /* CHANGING BG COLOR AND ICON COLOR WHEN BOOKMARK ICON IS ACTIVE */
+.density-on #switch .addwebpanel-wrapper>button.active button,
+.density-on #switch>.button-toolbar.active button,
+.density-on #switch>*>.button-toolbar.active button,
+.density-on #switch>button.active button {
+    background-color: var(--colorBg);
+    /* CHANGING BG COLOR AND ICON COLOR WHEN BOOKMARK ICON IS ACTIVE */
 }
 
 /* WEB PANELS */
 
 #panels-container.right .panel {
-    padding: 5px 13px 5px 5px; /* ADJUSTING ALL PANELS  PART 1 */
+    padding: 5px 13px 5px 5px;
+    /* ADJUSTING ALL PANELS  PART 1 */
 }
 
 .panel .outerScrollbar {
-    margin-right: 0px; /* ADJUSTING ALL PANELS PART 2 */
+    margin-right: 0px;
+    /* ADJUSTING ALL PANELS PART 2 */
 }
 
-.panel-group { /* ADJUSTING ALL PANELS PART 3 */
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); 
+.panel-group {
+    /* ADJUSTING ALL PANELS PART 3 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     border-radius: var(--radius);
     margin-right: 5px;
 }
 
-.panel > header h1 { /* REMOVING TITLE OF PANELS */
+.panel>header h1 {
+    /* REMOVING TITLE OF PANELS */
     display: none;
 }
 
 #panels-container.right:not(.icons).overlay .panel-group {
-    box-shadow: none; /* REMOVING LEFT SHADOW */
+    box-shadow: none;
+    /* REMOVING LEFT SHADOW */
 }
 
 #panels-container.overlay .panel-group {
-    background-color: transparent;  /* TRANSPARENT BG WHEN OPENED WEB APP */
+    background-color: transparent;
+    /* TRANSPARENT BG WHEN OPENED WEB APP */
 }
 
-#panels .webpanel-stack .webpanel .webpanel-content { /* ADJUSTING WEB APP */
+#panels .webpanel-stack .webpanel .webpanel-content {
+    /* ADJUSTING WEB APP */
     margin-right: 7px;
     border-bottom-right-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
 
-#panels .webpanel-stack .webpanel.visible { /* FIXING WEB APPS PANELS */
+#panels .webpanel-stack .webpanel.visible {
+    /* FIXING WEB APPS PANELS */
     visibility: visible;
     padding: 0px;
 }
 
-.panel > header {
-    margin-bottom: -1px; /* ADJUSTING GAP UNDER SEARCH BAR */
+.panel>header {
+    margin-bottom: -1px;
+    /* ADJUSTING GAP UNDER SEARCH BAR */
 }
 
-.vivaldi-tree .tree-row.dragover, .hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] { /* BG COLOR OF SELECTED ITEM WHEN BROWSER IS IN FOCUS */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.vivaldi-tree .tree-row.dragover,
+.hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] {
+    /* BG COLOR OF SELECTED ITEM WHEN BROWSER IS IN FOCUS */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     color: var(--colorFg);
 }
 
-.vivaldi-tree .tree-row[data-selected] { /* BG COLOR OF SELECTED ITEM WHEN BROWSER ISNT IN FOCUS */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.vivaldi-tree .tree-row[data-selected] {
+    /* BG COLOR OF SELECTED ITEM WHEN BROWSER ISNT IN FOCUS */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.win.hasfocus .vivaldi-tree .VivaldiList:focus-within .tree-item[data-lead] .tree-row.tree-row, .linux.hasfocus .vivaldi-tree .VivaldiList:focus-within .tree-item[data-lead] .tree-row.tree-row {
-    box-shadow: none; /* REMOVING BORDER OF SELECTED ITEM */
+.win.hasfocus .vivaldi-tree .VivaldiList:focus-within .tree-item[data-lead] .tree-row.tree-row,
+.linux.hasfocus .vivaldi-tree .VivaldiList:focus-within .tree-item[data-lead] .tree-row.tree-row {
+    box-shadow: none;
+    /* REMOVING BORDER OF SELECTED ITEM */
 }
 
-.panel-group .sortselector.sortselector-compact, .download-popout .sortselector.sortselector-compact {
-    border: none; /* REMOVING BORDER OF SORT */
+.panel-group .sortselector.sortselector-compact,
+.download-popout .sortselector.sortselector-compact {
+    border: none;
+    /* REMOVING BORDER OF SORT */
 }
 
-.panel-group .sortselector.sortselector-compact .sortselector-dropdown, .download-popout .sortselector.sortselector-compact .sortselector-dropdown {
-    border-radius: var(--radius); /* BORDER RADIUS OF SORT */
+.panel-group .sortselector.sortselector-compact .sortselector-dropdown,
+.download-popout .sortselector.sortselector-compact .sortselector-dropdown {
+    border-radius: var(--radius);
+    /* BORDER RADIUS OF SORT */
 }
 
 .sortselector {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF SORT */
-    height: calc(var(--treeViewRowHeight) - 4px); /* FIXING SORT */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF SORT */
+    height: calc(var(--treeViewRowHeight) - 4px);
+    /* FIXING SORT */
 }
 
-.sortselector.sortselector-compact:hover { /* HOVER OF SORT */
+.sortselector.sortselector-compact:hover {
+    /* HOVER OF SORT */
     background-color: var(--colorBg);
 }
 
-.toolbar-default .button-toolbar > button:enabled { /* REMOVING BG OF BUTTONS */
+.toolbar-default .button-toolbar>button:enabled {
+    /* REMOVING BG OF BUTTONS */
     background-image: none;
 }
 
-.toolbar-group > .button-toolbar:not(:last-child) > button, .toolbar-group hr:not(:last-child) > button { /* BORDER RADIUS FOR BUTTONS PART 1 */
+.toolbar-group>.button-toolbar:not(:last-child)>button,
+.toolbar-group hr:not(:last-child)>button {
+    /* BORDER RADIUS FOR BUTTONS PART 1 */
     border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
 }
 
-.toolbar-group > .button-toolbar + .button-toolbar > button, .toolbar-group hr + .button-toolbar > button { /* BORDER RADIUS FOR BUTTONS PART 2 */
+.toolbar-group>.button-toolbar+.button-toolbar>button,
+.toolbar-group hr+.button-toolbar>button {
+    /* BORDER RADIUS FOR BUTTONS PART 2 */
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
 }
 
-.panel input, .find-in-page input {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF SEARCH BAR IN PANELS AND CTRL+F */
+.panel input,
+.find-in-page input {
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF SEARCH BAR IN PANELS AND CTRL+F */
 }
 
 /* BOOKMARKS PANEL */
 
-.item-count, .tree-item .nickname {
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /*BG COLOR OF ITEM COUNT */
+.item-count,
+.tree-item .nickname {
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /*BG COLOR OF ITEM COUNT */
 }
 
 .panel-bookmarks .panel-bookmarks-edit {
-    display: none; /* REMOVING BOTTOM PART */
+    display: none;
+    /* REMOVING BOTTOM PART */
 }
 
 /* DOWNLOAD PANEL */
 
-.toolbar-default .button-toolbar > button:disabled {
-    background-color: transparent; /* REMOVING BG OF DISABLED ICONS */
+.toolbar-default .button-toolbar>button:disabled {
+    background-color: transparent;
+    /* REMOVING BG OF DISABLED ICONS */
 }
 
 .hasfocus .vivaldi-tree:focus-within .tree-row[data-selected] .ActionButton svg {
-    fill: var(--colorFg); /* COLOR OF FOLDER ICON OF SELECTED ITEM WHEN BROWSER IS FOCUSED */
+    fill: var(--colorFg);
+    /* COLOR OF FOLDER ICON OF SELECTED ITEM WHEN BROWSER IS FOCUSED */
 }
 
 .download-editor.download-editor {
-    display: none; /* REMOVING BOTTOM PART */
+    display: none;
+    /* REMOVING BOTTOM PART */
 }
 
-input.circular, button.circular { /* ADJUSTING RADIUS OF HOVER OF DOWNLAOD FOLDER ICON */
+input.circular,
+button.circular {
+    /* ADJUSTING RADIUS OF HOVER OF DOWNLAOD FOLDER ICON */
     border-radius: var(--radiusHalf);
 }
 
-.sortselector.sortselector-compact .sortselector-button { /* REMOVING BORDER IN SORT */
+.sortselector.sortselector-compact .sortselector-button {
+    /* REMOVING BORDER IN SORT */
     border-left: none;
 }
 
 /* CALENDAR PANEL */
 
-.panel > header > .toolbar + .toolbar {
-    margin-top: 5px; /* ADJUSTING GAP OF EVERYTING IN HEADER */
+.panel>header>.toolbar+.toolbar {
+    margin-top: 5px;
+    /* ADJUSTING GAP OF EVERYTING IN HEADER */
 }
 
 .panel .calendar-grid-agenda {
-    margin-top: 6px; /* ADJUSTING GAP ABOVE EVENTS IN AGENDA */
+    margin-top: 6px;
+    /* ADJUSTING GAP ABOVE EVENTS IN AGENDA */
 }
 
 
-.FilterAndSearch-Input.FilterAndSearch-Input { /* RADIUS OF SEARCH BAR */
+.FilterAndSearch-Input.FilterAndSearch-Input {
+    /* RADIUS OF SEARCH BAR */
     border-top-right-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
 }
 
-.FilterAndSearch-Button.FilterAndSearch-Button { /* RADIUS OF SEARCH BUTTON */
+.FilterAndSearch-Button.FilterAndSearch-Button {
+    /* RADIUS OF SEARCH BUTTON */
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
 }
 
-#calendar_panel input[type=button]:not(.circular), #calendar_panel input[type=submit], #calendar_panel input[type=color], #calendar_panel .FormButton { /* BG COLOR OF SEARCH BUTTON */
+#calendar_panel input[type=button]:not(.circular),
+#calendar_panel input[type=submit],
+#calendar_panel input[type=color],
+#calendar_panel .FormButton {
+    /* BG COLOR OF SEARCH BUTTON */
     background-image: none;
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
 
 .DatePickerPopup {
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF SELECTING WEEK WINDOW  PART 1 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF SELECTING WEEK WINDOW  PART 1 */
 }
 
 .DatePickerPopup .toolbar {
-    background-color: transparent; /* BG COLOR OF SELECTING WEEK WINDOW  PART 2 */
+    background-color: transparent;
+    /* BG COLOR OF SELECTING WEEK WINDOW  PART 2 */
 }
 
 .button-popup-arrow-dark:before {
-    border-bottom-color: transparent; /* REMOVING ARROW */
+    border-bottom-color: transparent;
+    /* REMOVING ARROW */
 }
 
-#calendar_panel .PeriodPicker.PeriodPicker { /* FIXING BG OF PERIOD PICKER */
+#calendar_panel .PeriodPicker.PeriodPicker {
+    /* FIXING BG OF PERIOD PICKER */
     border-color: transparent;
     background-image: none;
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
 
-.toolbar-default .button-toolbar > button:enabled.button-pressed { /* FIXING ACTIVE BUTTON */
+.toolbar-default .button-toolbar>button:enabled.button-pressed {
+    /* FIXING ACTIVE BUTTON */
     background-image: none;
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
 
-#panels #calendar_panel .cal-tasks-row, #panels #tasks_panel .cal-tasks-row {
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF EVENTS IN AGENDA */
+#panels #calendar_panel .cal-tasks-row,
+#panels #tasks_panel .cal-tasks-row {
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF EVENTS IN AGENDA */
 }
 
 .calendar-grid-agenda .cal-tasks-row {
-    border-bottom: none; /* REMOVING BORDER OF EVENTS IN AGENDA */
+    border-bottom: none;
+    /* REMOVING BORDER OF EVENTS IN AGENDA */
 }
 
 .theme-dark .panel .SlideBar--FullWidth.alternate {
-    display: none; /* REMOVING SEPARATOR DARK MODE */
+    display: none;
+    /* REMOVING SEPARATOR DARK MODE */
 }
 
 .panel .SlideBar--FullWidth.alternate {
-    display: none; /* REMOVING SEPARATOR LIGHT MODE */
+    display: none;
+    /* REMOVING SEPARATOR LIGHT MODE */
 }
 
 .MonthDayPicker {
-    margin-bottom: 0px; /* FIXING BOTTOM PART */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG OF BOTTOM CALENDAR */
+    margin-bottom: 0px;
+    /* FIXING BOTTOM PART */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG OF BOTTOM CALENDAR */
 }
 
 .CalendarPanel-MiniCalendar {
-    padding-top: 5px; /* ADJUSTING SPACE ABOVE BOTTOM CALENDAR */
+    padding-top: 5px;
+    /* ADJUSTING SPACE ABOVE BOTTOM CALENDAR */
 }
 
 .MonthDayPicker-Header {
-    padding-top: 3px; /* ADJUSTING PADDING OF HEADER IN BOTTOM CALENDAR */
+    padding-top: 3px;
+    /* ADJUSTING PADDING OF HEADER IN BOTTOM CALENDAR */
 }
 
-.MonthDayPicker-Header h2 { /* ADJUSTING POSITION OF MONTH IN BOTTOM CALENDAR */
+.MonthDayPicker-Header h2 {
+    /* ADJUSTING POSITION OF MONTH IN BOTTOM CALENDAR */
     font-weight: normal;
     padding-right: 5px;
 }
 
 .MonthDayPicker-Day--SelectedWeek {
-    border-radius: var(--radiusHalf); /* RADIUS OF SELECTED WEEK IN BOTTOM CALENDAR */
+    border-radius: var(--radiusHalf);
+    /* RADIUS OF SELECTED WEEK IN BOTTOM CALENDAR */
 }
 
-.calendar-grid-days.calendar-grid-week { 
-    margin-top: 6px; /* ADDING MARGIN TO WEEK CALENDAR */
+.calendar-grid-days.calendar-grid-week {
+    margin-top: 6px;
+    /* ADDING MARGIN TO WEEK CALENDAR */
 }
 
 .calendar-grid {
-    gap: 5px; /* ADJUSTING GAP OF WEEK CALENDAR */
+    gap: 5px;
+    /* ADJUSTING GAP OF WEEK CALENDAR */
 }
 
 .calendar-grid-days .calendar-drop-target {
-    border-radius: var(--radius); /* RADIUS OF DAYS IN WEEK CALENDAR */
-    border: none; /* ADJUSTING HIGHLIGHTED DAY IN WEEK CALENDAR  PART 1 */
+    border-radius: var(--radius);
+    /* RADIUS OF DAYS IN WEEK CALENDAR */
+    border: none;
+    /* ADJUSTING HIGHLIGHTED DAY IN WEEK CALENDAR  PART 1 */
 }
 
-.calendar-grid-days .calendar-drop-target .day.current { /* ADJUSTING HIGHLIGHTED DAY IN WEEK CALENDAR  PART 2 */
+.calendar-grid-days .calendar-drop-target .day.current {
+    /* ADJUSTING HIGHLIGHTED DAY IN WEEK CALENDAR  PART 2 */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.calendar-grid .calendar-drop-target { /* BG COLOR OF DAYS IN WEEK CALENDAR PART 1 */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.calendar-grid .calendar-drop-target {
+    /* BG COLOR OF DAYS IN WEEK CALENDAR PART 1 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.calendar-grid .calendar-drop-target.weekend { /* BG COLOR OF DAYS IN WEEK CALENDAR PART 2 */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.calendar-grid .calendar-drop-target.weekend {
+    /* BG COLOR OF DAYS IN WEEK CALENDAR PART 2 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.calendar-add-event-button { /* BG COLOR OF DAYS IN WEEK CALENDAR PART 3 */
+.calendar-add-event-button {
+    /* BG COLOR OF DAYS IN WEEK CALENDAR PART 3 */
     background-image: none;
 }
 
-.calendar-add-event-button { /* REMOVING BORDER AND CHANGING RADIUS IN WEEK CALENDAR */
+.calendar-add-event-button {
+    /* REMOVING BORDER AND CHANGING RADIUS IN WEEK CALENDAR */
     border: none;
     border-radius: var(--radius);
 }
 
-.calendar-grid-day { /* ADJUSTING POSITION OF MIDDLE PART IN DAY CALENDAR */
+.calendar-grid-day {
+    /* ADJUSTING POSITION OF MIDDLE PART IN DAY CALENDAR */
     margin-top: 6px;
 }
 
-.calendar-grid .calendar-header-date { /* ADDING RADIUS TO HEADER IN DAY CALENDAR */
+.calendar-grid .calendar-header-date {
+    /* ADDING RADIUS TO HEADER IN DAY CALENDAR */
     outline: none;
     border-radius: var(--radius);
 }
 
 /* MAIL PANEL */
 
-.toolbar-group > hr {
-    display: none; /* REMOVING HR BETWEEN BUTTONS */
+.toolbar-group>hr {
+    display: none;
+    /* REMOVING HR BETWEEN BUTTONS */
 }
 
 /* ADD WEB PANEL PANEL */
 
-.addwebpanelcallout input { /* FIXING BG COLOR OF INPUT */
+.addwebpanelcallout input {
+    /* FIXING BG COLOR OF INPUT */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.addwebpanelcallout .webpanel-suggestion { /* BG COLOR OF SUGGESTED WEB APPS */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.addwebpanelcallout .webpanel-suggestion {
+    /* BG COLOR OF SUGGESTED WEB APPS */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.addwebpanelcallout button { /* REMOVING BORDER OF SUGGESTED WEB APPS */
+.addwebpanelcallout button {
+    /* REMOVING BORDER OF SUGGESTED WEB APPS */
     border-color: transparent;
 }
 
-.addwebpanelcallout .FormButton { /* FIXING BG COLOR OF CUSTOMIZE PANEL... */
+.addwebpanelcallout .FormButton {
+    /* FIXING BG COLOR OF CUSTOMIZE PANEL... */
     background-image: none;
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 /* INNER ROUND BORDERS */
@@ -697,354 +925,446 @@ input.circular, button.circular { /* ADJUSTING RADIUS OF HOVER OF DOWNLAOD FOLDE
 
 /* TAB TILES MODE */
 
-#browser .tile:has(> .tiled.webpageview) { /* REMOVED DEFAULT BEHAVIOUR */
-  border: 0 solid transparent;
+#browser .tile:has(> .tiled.webpageview) {
+    /* REMOVED DEFAULT BEHAVIOUR */
+    border: 0 solid transparent;
 }
 
-#browser .tiled:not(.webpageview) { /* INSTEAD OF DEFAULT BEHAVIOR IS GAP */
-  gap: 9px;
+#browser .tiled:not(.webpageview) {
+    /* INSTEAD OF DEFAULT BEHAVIOR IS GAP */
+    gap: 9px;
 }
 
-#browser:not(.inner, .narrow-tiling) #webpage-stack > .tiled.visible {
-    box-shadow: inset 0 0 0 var(--n6) transparent; /* REMOVING SOME WEIRD SHADOW */
+#browser:not(.inner, .narrow-tiling) #webpage-stack>.tiled.visible {
+    box-shadow: inset 0 0 0 var(--n6) transparent;
+    /* REMOVING SOME WEIRD SHADOW */
 }
 
 .hasfocus .webpageview.tiled.active {
-    box-shadow: 0 0 0 2px var(--colorAccentBg); /* CHANGING COLOR OF BORDER OF ACTIVE WHEN BROWSER IS FOCUSED */
+    box-shadow: 0 0 0 2px var(--colorAccentBg);
+    /* CHANGING COLOR OF BORDER OF ACTIVE WHEN BROWSER IS FOCUSED */
 }
 
 .isblurred .webpageview.tiled.active {
-    box-shadow: 0 0 0 2px var(--colorAccentBg); /* CHANGING COLOR OF BORDER OF ACTIVE WHEN BROWSER ISNT FOCUSED */
+    box-shadow: 0 0 0 2px var(--colorAccentBg);
+    /* CHANGING COLOR OF BORDER OF ACTIVE WHEN BROWSER ISNT FOCUSED */
 }
 
 .webpageview.tiled:not(.active) {
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* CHANGING COLOR OF BORDER OF NON ACTIVE */
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* CHANGING COLOR OF BORDER OF NON ACTIVE */
 }
 
 /* SPEED DIAL */
 
-.SpeedDial--Thumbnail { /* BG COLOR OF TITLE */
+.SpeedDial--Thumbnail {
+    /* BG COLOR OF TITLE */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     box-shadow: none;
 }
 
-.SpeedDialView-Settings { /* ADJUSTING SETTINGS OF SPEED DIAL */
+.SpeedDialView-Settings {
+    /* ADJUSTING SETTINGS OF SPEED DIAL */
     border-radius: var(--radius);
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
 
-.SpeedDialView-Settings .close { /* REMOVING BG AROUND CLOSE BUTTON */
+.SpeedDialView-Settings .close {
+    /* REMOVING BG AROUND CLOSE BUTTON */
     background-color: transparent;
 }
 
-.SpeedDialView-Settings .close:hover { /* REMOVING HOVER BG AROUND CLOSE BUTTON */
+.SpeedDialView-Settings .close:hover {
+    /* REMOVING HOVER BG AROUND CLOSE BUTTON */
     background-color: transparent;
 }
 
-.SpeedDialView-Settings a:-webkit-any-link { /* COLOR OF LINK */
+.SpeedDialView-Settings a:-webkit-any-link {
+    /* COLOR OF LINK */
     color: var(--colorFg);
 }
 
-.SpeedDialView-Settings hr { /* HIDING HR IN SPEED DIAL SETTINS */
+.SpeedDialView-Settings hr {
+    /* HIDING HR IN SPEED DIAL SETTINS */
     border: transparent;
 }
 
 .SpeedDialView-Settings input:not(.Switch-Input) {
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* CHANGING BG COLOR OF SELECT IMAGE */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* CHANGING BG COLOR OF SELECT IMAGE */
 }
 
-select:enabled:not([multiple], [size]), .SpeedDialView-Settings .VivaldiSelector:not(:focus-within) .Inner__control {
-    background-image: none; /* CHANGING BG COLOR OF SELECTS */
+select:enabled:not([multiple], [size]),
+.SpeedDialView-Settings .VivaldiSelector:not(:focus-within) .Inner__control {
+    background-image: none;
+    /* CHANGING BG COLOR OF SELECTS */
 }
 
 #browser .Switch .Switch-Input {
-    box-shadow: none; /* REMOVING SHADOW FROM SWITCH PART 1 */
+    box-shadow: none;
+    /* REMOVING SHADOW FROM SWITCH PART 1 */
 }
 
 #browser .Switch-Input {
-    box-shadow: none; /* REMOVING SHADOW FROM SWITCH PART 2 */
+    box-shadow: none;
+    /* REMOVING SHADOW FROM SWITCH PART 2 */
 }
 
-.theme-dark#browser .Switch-Input:not(:checked) { /* CHANGING BG COLOR OF UNCHECKED SWITCH DARK MODE */
+.theme-dark#browser .Switch-Input:not(:checked) {
+    /* CHANGING BG COLOR OF UNCHECKED SWITCH DARK MODE */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-#browser .Switch-Input:not(:checked) { /* CHANGING BG COLOR OF UNCHECKED SWITCH LIGHT MODE*/
+#browser .Switch-Input:not(:checked) {
+    /* CHANGING BG COLOR OF UNCHECKED SWITCH LIGHT MODE*/
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-#browser .Switch-Input:not(:checked) + .Switch-Button { /* CHANGING COLOR FROM DOT OF UNCHECKED SWITCH */
+#browser .Switch-Input:not(:checked)+.Switch-Button {
+    /* CHANGING COLOR FROM DOT OF UNCHECKED SWITCH */
     background-color: var(--colorFg);
 }
 
-#browser .Switch-Button { /* REMOVING SHADOW FROM DOT OF SWITCH */
+#browser .Switch-Button {
+    /* REMOVING SHADOW FROM DOT OF SWITCH */
     box-shadow: none;
 }
 
 /* VIVALDI SETTINGS */
 
 .vivaldi-settings .settings-content {
-    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent)); /* VIVALDI SETTINGS WERENT READABLE WITH COLORBG */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+    /* VIVALDI SETTINGS WERENT READABLE WITH COLORBG */
 }
 
 /* CTRL+F */
 
 .find-in-page-wrapper {
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG COLOR OF CTRL F */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG COLOR OF CTRL F */
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     border-bottom: none;
-    border-top-left-radius: var(--radius); /* FIX FOR TAB TILES */
+    border-top-left-radius: var(--radius);
+    /* FIX FOR TAB TILES */
     border-top-right-radius: var(--radius);
 }
 
 /* WORKSPACES WINDOW + SOME ADJUSTING FOR PAGE TILING WINDOW */
 
-.button-popup { /* BG OF WORKSPACE WINDOW PART 1 */
-    background-color:  color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+.button-popup {
+    /* BG OF WORKSPACE WINDOW PART 1 */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
     /* width: 194px; */
 }
 
-.theme-dark .WorkspacePopup { /* BG OF WORKSPACE WINDOW PART 2 DARK MODE */
+.theme-dark .WorkspacePopup {
+    /* BG OF WORKSPACE WINDOW PART 2 DARK MODE */
     background-color: transparent;
 }
 
-.WorkspacePopup { /* BG OF WORKSPACE WINDOW PART 2 LIGHT MODE */
+.WorkspacePopup {
+    /* BG OF WORKSPACE WINDOW PART 2 LIGHT MODE */
     background-color: transparent;
 }
 
-.WorkspacePopup-Items .workspace-item-wrapper .checkmark, .WorkspacePopup-Items .this-window .checkmark { /* ADJUSTING CHECKMARK OF ACTIVE WORKSPACE */
+.WorkspacePopup-Items .workspace-item-wrapper .checkmark,
+.WorkspacePopup-Items .this-window .checkmark {
+    /* ADJUSTING CHECKMARK OF ACTIVE WORKSPACE */
     margin-right: 11px;
     margin-top: 3px;
     fill: var(--colorFg);
 }
 
-.theme-dark .WorkspacePopup-Items .workspace-item-wrapper, .theme-dark .WorkspacePopup-Items .this-window { /* BG OF WORKSPACES DARK MODE */
+.theme-dark .WorkspacePopup-Items .workspace-item-wrapper,
+.theme-dark .WorkspacePopup-Items .this-window {
+    /* BG OF WORKSPACES DARK MODE */
     background-color: transparent;
     padding: 4px;
 }
 
-.WorkspacePopup-Items .workspace-item-wrapper, .WorkspacePopup-Items .this-window { /* BG OF WORKSPACES LIGHT MODE */
+.WorkspacePopup-Items .workspace-item-wrapper,
+.WorkspacePopup-Items .this-window {
+    /* BG OF WORKSPACES LIGHT MODE */
     background-color: transparent;
     padding: 4px;
 }
 
-.WorkspacePopup-Items .workspace-item-wrapper .title .tab-count, .WorkspacePopup-Items .this-window .title .tab-count {
-    color: var(--colorFg); /* FONT COLOR OF NUMBER OF TABS */
+.WorkspacePopup-Items .workspace-item-wrapper .title .tab-count,
+.WorkspacePopup-Items .this-window .title .tab-count {
+    color: var(--colorFg);
+    /* FONT COLOR OF NUMBER OF TABS */
 }
 
 .button-popup-right.button-popup-arrow-dark:before {
-    border-bottom-color: transparent; /* REMOVING ARROW */
+    border-bottom-color: transparent;
+    /* REMOVING ARROW */
 }
 
-.WorkspacePopup .button-toolbar > button { /* BG COLOR OF NEW WORKSPACE BUTTON PART 1 */
+.WorkspacePopup .button-toolbar>button {
+    /* BG COLOR OF NEW WORKSPACE BUTTON PART 1 */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.WorkspacePopup .FormButton { /* BG COLOR OF NEW WORKSPACE BUTTON PART 2 */
+.WorkspacePopup .FormButton {
+    /* BG COLOR OF NEW WORKSPACE BUTTON PART 2 */
     background-image: none;
 }
 
-.WorkspacePopup-Items hr { /* AJDUSTING MARGIN OF SEPARATOR */
+.WorkspacePopup-Items hr {
+    /* AJDUSTING MARGIN OF SEPARATOR */
     margin-top: 5px;
     margin-bottom: 1px;
-}  
-
-:not(:active, .workspace-item-wrapper).WorkspacePopup-Items .workspace-item-wrapper:hover { /* REMOVING HOVER FROM EDITOR OF BG PART 1 */
-    background-color:  transparent;
 }
 
-.WorkspacePopup-Items .workspace-item-wrapper:hover:not(.Workspace-Editor.workspace-item-wrapper) { /* REMOVING HOVER FROM EDITOR OF BG PART 2 */
+:not(:active, .workspace-item-wrapper).WorkspacePopup-Items .workspace-item-wrapper:hover {
+    /* REMOVING HOVER FROM EDITOR OF BG PART 1 */
+    background-color: transparent;
+}
+
+.WorkspacePopup-Items .workspace-item-wrapper:hover:not(.Workspace-Editor.workspace-item-wrapper) {
+    /* REMOVING HOVER FROM EDITOR OF BG PART 2 */
     background-color: var(--colorBg) !important;
 }
 
-.WorkspacePopup-Items .workspace-item-wrapper input:focus, .WorkspacePopup-Items .workspace-item-wrapper input { /* CHANGING BG COLOR OF INPUT BAR OF NEW WORKSPACE NAME */
+.WorkspacePopup-Items .workspace-item-wrapper input:focus,
+.WorkspacePopup-Items .workspace-item-wrapper input {
+    /* CHANGING BG COLOR OF INPUT BAR OF NEW WORKSPACE NAME */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.Workspace-Editor.workspace-item-wrapper .workspace-buttons { 
-    border: none; /* REMOVING BORDER AROUND ICON EMOJI BUTTONS */
-}
-
-.Workspace-Editor.workspace-item-wrapper .workspace-buttons input.active { /* CHANGING BG COLOR OF ACTIVE ICON EMOJI BUTTON */
-    background-color: var(--colorBg);
-}
-
-.Workspace-Editor.workspace-item-wrapper .workspace-buttons input { /* CHANGING BG COLOR OF NON-ACTIVE ICON EMOJI BUTTON */
-    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
-}
-
-.Workspace-Editor.workspace-item-wrapper .workspace-buttons input:hover { /* CHANGING HOVER OF BG COLOR OF NON-ACTIVE ICON EMOJI BUTTON */
-    background-color: var(--colorBg);
-}
-
-.Workspace-Editor.workspace-item-wrapper .workspaces input[type='text'] { /* ADJUSTING INPUT ANY EMOJI */
+.Workspace-Editor.workspace-item-wrapper .workspace-buttons {
     border: none;
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* REMOVING BORDER AROUND ICON EMOJI BUTTONS */
 }
 
-.WorkspacePopup input { /* CHANGING BG COLOR OF BUTTONS IN CREATE NEW WORKSPACE */
+.Workspace-Editor.workspace-item-wrapper .workspace-buttons input.active {
+    /* CHANGING BG COLOR OF ACTIVE ICON EMOJI BUTTON */
+    background-color: var(--colorBg);
+}
+
+.Workspace-Editor.workspace-item-wrapper .workspace-buttons input {
+    /* CHANGING BG COLOR OF NON-ACTIVE ICON EMOJI BUTTON */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.Workspace-Editor.workspace-item-wrapper .workspaces input[type='submit'] { /* REMOVING BORDER OF DONE BUTTON */
+.Workspace-Editor.workspace-item-wrapper .workspace-buttons input:hover {
+    /* CHANGING HOVER OF BG COLOR OF NON-ACTIVE ICON EMOJI BUTTON */
+    background-color: var(--colorBg);
+}
+
+.Workspace-Editor.workspace-item-wrapper .workspaces input[type='text'] {
+    /* ADJUSTING INPUT ANY EMOJI */
+    border: none;
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+.WorkspacePopup input {
+    /* CHANGING BG COLOR OF BUTTONS IN CREATE NEW WORKSPACE */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+.Workspace-Editor.workspace-item-wrapper .workspaces input[type='submit'] {
+    /* REMOVING BORDER OF DONE BUTTON */
     border-color: transparent;
 }
 
-.WorkspacePopup input[type=submit] { /* ADJUSTING DONE BUTTON */
+.WorkspacePopup input[type=submit] {
+    /* ADJUSTING DONE BUTTON */
     background-image: none;
 }
 
 /* PAGE TILING WINDOW */
 
-.button-popup.ToolbarButtonPopup-DefaultStyles h2 { /* ADJUSTING PAGE TILING H2 */
+.button-popup.ToolbarButtonPopup-DefaultStyles h2 {
+    /* ADJUSTING PAGE TILING H2 */
     background-color: transparent;
     border-bottom: none;
 }
 
-.button-popup-arrow-light:before { /* REMOVING ARROW */
+.button-popup-arrow-light:before {
+    /* REMOVING ARROW */
     border-bottom-color: transparent;
 }
 
 /* CALENDAR NOTIFICATIONS WINDOW */
 
-#modal-bg.calendar-alarm { /* REMOVING COLOR WHICH MADE BROWSER DARKER WHEN NOTIFICATION SHOWS */
+#modal-bg.calendar-alarm {
+    /* REMOVING COLOR WHICH MADE BROWSER DARKER WHEN NOTIFICATION SHOWS */
     background-color: transparent;
 }
 
-.CalendarNotifications { /* ADJUSTING BG OF CALENDAR NOTIFICATION */
-    background-color:  color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+.CalendarNotifications {
+    /* ADJUSTING BG OF CALENDAR NOTIFICATION */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
 }
 
-.dialog-footer { /* REMOVING BORDER AND BG COLOR  OF FOOTER OF NOTIFICATION*/
+.dialog-footer {
+    /* REMOVING BORDER AND BG COLOR  OF FOOTER OF NOTIFICATION*/
     background-color: transparent;
     border-top: none;
 }
 
-.dialog-header { /* ADJUSTING PADDING OF HEADER */
+.dialog-header {
+    /* ADJUSTING PADDING OF HEADER */
     padding: 12px 12px 5px;
 }
 
-.CalendarNotification-Content { /* ADJUSTING MARGIN OF NAME OF EVENT */
+.CalendarNotification-Content {
+    /* ADJUSTING MARGIN OF NAME OF EVENT */
     margin: 0 5px 0 5px;
 }
 
-.dialog-double-header, .dialog-content, .dialog-footer { /* ADJUSTING PADDING OF FOOTER */
+.dialog-double-header,
+.dialog-content,
+.dialog-footer {
+    /* ADJUSTING PADDING OF FOOTER */
     padding: 12px 12px;
 }
 
-/* TAB BUTTON WINDOW */ 
+/* TAB BUTTON WINDOW */
 
-.TabButtonPopup { /* BG COLOR OF HEADER */
+.TabButtonPopup {
+    /* BG COLOR OF HEADER */
     background: transparent;
 }
 
-.TabButtonPopup > header { /* ADJSUTING POSITION OF SEARCHBAR */
+.TabButtonPopup>header {
+    /* ADJSUTING POSITION OF SEARCHBAR */
     padding: 6px 6px 0px 6px;
 }
 
-.TabButtonPopup > header .qc-entry:focus-within { /* REMOVING OUTLINE OF SEARHBAR WHEN FOCUSED */
+.TabButtonPopup>header .qc-entry:focus-within {
+    /* REMOVING OUTLINE OF SEARHBAR WHEN FOCUSED */
     outline: none;
 }
 
-.TabButtonPopup > header .qc-entry { /* REMOVING BORDER OF SEARCHBAR WHEN NOT IN FOCUS */
+.TabButtonPopup>header .qc-entry {
+    /* REMOVING BORDER OF SEARCHBAR WHEN NOT IN FOCUS */
     border: 1px solid transparent;
 }
 
-.TabButtonPopup > header .qc-entry { /* BG COLOR OF SEARCH BAR */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.TabButtonPopup>header .qc-entry {
+    /* BG COLOR OF SEARCH BAR */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.TabButtonPopup > header .button-toolbar > button:hover { /* BG COLOR OF HOVER OF MENU ICON */
+.TabButtonPopup>header .button-toolbar>button:hover {
+    /* BG COLOR OF HOVER OF MENU ICON */
     background-color: var(--colorBg);
 }
 
-.TabButtonPopup .dialog-content, .TabButtonPopup .no-results { /* BG COLOR OF THE REST */
+.TabButtonPopup .dialog-content,
+.TabButtonPopup .no-results {
+    /* BG COLOR OF THE REST */
     background-color: transparent;
 }
 
-.theme-dark .TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row { /* BG BEHIND TEXT DARK MODE */
+.theme-dark .TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row {
+    /* BG BEHIND TEXT DARK MODE */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row { /* BG BEHIND TEXT LIGHT MODE */
+.TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row {
+    /* BG BEHIND TEXT LIGHT MODE */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.TabButtonPopup .quick-commands, .TabButtonPopup .dialog-content, .TabButtonPopup .no-results { /* BG OF RESULTS FROM SEARCH BAR PART 1 */
+.TabButtonPopup .quick-commands,
+.TabButtonPopup .dialog-content,
+.TabButtonPopup .no-results {
+    /* BG OF RESULTS FROM SEARCH BAR PART 1 */
     background-color: transparent;
 }
 
-.TabButtonPopup .quick-commands > .VivaldiList .VivaldiList-Offset {
+.TabButtonPopup .quick-commands>.VivaldiList .VivaldiList-Offset {
     padding: 6px 6px;
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent)); /* BG OF RESULTS FROM SEARCH BAR PART 2 */
-    border-radius: var(--radiusHalf); /* BORDER RADIUS OF RESULTS PART 1 */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    /* BG OF RESULTS FROM SEARCH BAR PART 2 */
+    border-radius: var(--radiusHalf);
+    /* BORDER RADIUS OF RESULTS PART 1 */
 }
 
-.TabButtonPopup .VivaldiList { /* BORDER RADIUS OF RESULTS PART 2 */
+.TabButtonPopup .VivaldiList {
+    /* BORDER RADIUS OF RESULTS PART 2 */
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
 
-.TabButtonPopup .tree-row[data-selected] .window-entry:not(.window-entry-button) { /* BG OF SELECTED ITEM IN LIST */
+.TabButtonPopup .tree-row[data-selected] .window-entry:not(.window-entry-button) {
+    /* BG OF SELECTED ITEM IN LIST */
     background-color: var(--colorBg);
 }
 
 .hasfocus .TabButtonPopup .vivaldi-tree .VivaldiList:focus-within .tree-row[data-selected] .window-entry:not(.window-entry-button) {
-    background-color: var(--colorBg); /* BG OF SELECTED ITEM IN LIST */
+    background-color: var(--colorBg);
+    /* BG OF SELECTED ITEM IN LIST */
 }
 
-.TabButtonPopup .tree-row .window-entry:not(.window-entry-button):hover { /* BG OF HOVER OF ITEM IN LIST PART 1 */
+.TabButtonPopup .tree-row .window-entry:not(.window-entry-button):hover {
+    /* BG OF HOVER OF ITEM IN LIST PART 1 */
     background-color: var(--colorBg);
 }
 
 .TabButtonPopup .tree-row-selected label,
-.TabButtonPopup .tree-row:hover label { /* BG OF HOVER OF ITEM IN LIST PART 2 */
+.TabButtonPopup .tree-row:hover label {
+    /* BG OF HOVER OF ITEM IN LIST PART 2 */
     background-color: transparent;
 }
 
-.TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row:not([data-selected]) .colored { /* BG COLOR OF TAB GROUPS IN TAB BUTTON */
-    background-color:  color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+.TabButtonPopup .vivaldi-tree .VivaldiList .tree-item .tree-row:not([data-selected]) .colored {
+    /* BG COLOR OF TAB GROUPS IN TAB BUTTON */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
 }
 
-.TabButtonPopup .vivaldi-tree input { /* BG OF BOTTOM BUTTON */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.TabButtonPopup .vivaldi-tree input {
+    /* BG OF BOTTOM BUTTON */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.TabButtonPopup .window-entry-button { /* FIXING POSITION OF BOTTOM BUTTON */
+.TabButtonPopup .window-entry-button {
+    /* FIXING POSITION OF BOTTOM BUTTON */
     padding: 8px 3px;
 }
 
 /* DOWNLOAD WINDOW */
 
-#modal-bg.dialog-download { /* FIXING BG COLOR */
+#modal-bg.dialog-download {
+    /* FIXING BG COLOR */
     background-color: transparent;
 }
 
 /* DELETE WORKSPACE WINDOW */
 
-.theme-dark input[type=button]:not(.circular).danger { /* FIXING FONT COLOR DARK MODE */
+.theme-dark input[type=button]:not(.circular).danger {
+    /* FIXING FONT COLOR DARK MODE */
     color: var(--colorFg);
 }
 
-input[type=button]:not(.circular).danger { /* FIXING FONT COLOR LIGHT MODE */
+input[type=button]:not(.circular).danger {
+    /* FIXING FONT COLOR LIGHT MODE */
     color: var(--colorFg) !important;
 }
 
-input[type=button]:not(.circular).danger, input[type=submit].danger, input[type=color].danger, .FormButton.danger { /* FIXING DELETE BUTTON */
+input[type=button]:not(.circular).danger,
+input[type=submit].danger,
+input[type=color].danger,
+.FormButton.danger {
+    /* FIXING DELETE BUTTON */
     color: var(--colorFg);
     border-color: transparent;
 }
 
-input[type=button]:not(.circular).danger.danger:hover { /* FIXING HOVER OF DELETE BUTTON */
+input[type=button]:not(.circular).danger.danger:hover {
+    /* FIXING HOVER OF DELETE BUTTON */
     color: var(--colorFg);
     background: var(--colorBg);
     border-color: transparent;
@@ -1053,30 +1373,37 @@ input[type=button]:not(.circular).danger.danger:hover { /* FIXING HOVER OF DELET
 
 /* TOOLBAR EDITOR WINDOW */
 
-#modal-bg.toolbar-editor section.dialog-preview { /* REMOVING BG AND BORDER OF DEFAULT TOOLBAR PREVIEW */
+#modal-bg.toolbar-editor section.dialog-preview {
+    /* REMOVING BG AND BORDER OF DEFAULT TOOLBAR PREVIEW */
     background-color: transparent;
     border: none;
 }
 
 /* QUICK COMMANDS WINDOW */
 
-#modal-bg .quick-command-container input { /* BG COLOR OF INPUT */
+#modal-bg .quick-command-container input {
+    /* BG COLOR OF INPUT */
     background-color: transparent;
 }
 
-.quick-command-container .quick-command-search, .quick-command-container .quick-command-search-hint { /* REMOVING BORDER UNDER INPUT */
+.quick-command-container .quick-command-search,
+.quick-command-container .quick-command-search-hint {
+    /* REMOVING BORDER UNDER INPUT */
     border-bottom: none;
 }
 
-.quick-command-container .quick-command-search-hint { /* REMOVING OPACITY OF FONT IN INPUT */
+.quick-command-container .quick-command-search-hint {
+    /* REMOVING OPACITY OF FONT IN INPUT */
     opacity: 1;
 }
 
-.quick-command-container .quick-commands { /* BG COLOR OF WINDOW */
+.quick-command-container .quick-commands {
+    /* BG COLOR OF WINDOW */
     background-color: transparent;
 }
 
-.hasfocus .quick-command-container .quick-commands .quick-command[data-selected] { /* FIXING BG COLOR OF HOVER OF ITEM WHEN BROWSER IS IN FOCUS */
+.hasfocus .quick-command-container .quick-commands .quick-command[data-selected] {
+    /* FIXING BG COLOR OF HOVER OF ITEM WHEN BROWSER IS IN FOCUS */
     color: var(--colorFg);
     background-color: var(--colorBg);
 }
