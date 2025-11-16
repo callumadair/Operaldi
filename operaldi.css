@@ -7,22 +7,22 @@ zkusit upravit označený taby ctrl (asi nejde?)
 
 
 modernizace:
-přidat bookmark na speed dial okno
-přidat bookmark okno
 jaký další modální okna???
-speed dial (inspirace jinde?)
 
 
 
 moooooooooooožnááá:
-arc like pinned taby?
+status bar
+vše na speed dialu
 horizontal tabs?? #tabs-tabbar-container.left
+mít panel i tab bar na obou stranách???
+arc like pinned taby?
 
 */ 
 
 :root {
     --lessTransparent: transparent 50%; /* TRANSPARENCY OF BROWSER - 50% */
-    --blur: blur(15px); /* BLUR OF BROWSER */
+    --blur: blur(15px); /* BLUR OF BROWSER - 15px */
 }
 
 /* SETTINGS OF ALL INPUTS */
@@ -32,16 +32,16 @@ select:not(.sortselector-dropdown) { /* ADJUSTING SELECTS IN MANY WINDOWS ETC */
     border-color: transparent;
 }
 
-input[type=button]:not(.circular) { /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
+input[type=button]:not(.circular), input[type=submit]:not(.circular), input[type=submit][type=submit] { /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
     background-image: none;
 }
 
-input[type=button]:not(.circular).primary { /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary, input[type=submit]:not(.circular).primary, input[type=submit][type=submit] { /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     border-color: transparent;
 }
 
-input[type=button]:not(.circular).primary:hover { /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary:hover, input[type=submit]:not(.circular).primary:hover, input[type=submit][type=submit]:hover { /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     background: var(--colorBg) !important;
     border-color: transparent;
@@ -53,6 +53,7 @@ input[type=button]:not(.circular).primary:hover { /* REMOVING UGLY COLORS FROM H
 
 input[type=tel], input[type=text], input[type=search], input[type=email], input[type=url], input[type=date], input[type=time], input[type=password], input[type=number] {
     box-shadow: none; /* REMOVE SHADOW FROM SEARCH BAR */
+    border-color: transparent;
 }
 
 input, input[type=search], input[type=password], input[type=email], input[type=url], input[type=number], input[type=radio], input[type=date], input[type=time], input[type=checkbox], input[type=button], input[type=submit] {
@@ -1079,4 +1080,109 @@ input[type=button]:not(.circular).danger.danger:hover { /* FIXING HOVER OF DELET
 .hasfocus .quick-command-container .quick-commands .quick-command[data-selected] { /* FIXING BG COLOR OF HOVER OF ITEM WHEN BROWSER IS IN FOCUS */
     color: var(--colorFg);
     background-color: var(--colorBg);
+}
+
+/* ADD BOOKMARK TO SPEED DIAL WINDOW */
+
+.startpage #modal-bg.startpage-drawer { /* BG COLOR OF WHOLE WINDOW */
+    background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
+    backdrop-filter: none;
+}
+
+.startpage #modal-bg.startpage-drawer section .SpeedDial { /* BG COLOR OF SITES */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    border-radius: var(--radius);
+}
+
+.startpage #modal-bg.startpage-drawer .FormButton { /* FIXING NEW FOLDER BUTTON */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    border-color: transparent;
+    background-image: none;
+}
+
+.startpage #modal-bg.startpage-drawer .FormButton:hover { /* FIXING HOVER OF NEW FOLDER BUTTON */
+    background-color: var(--colorBg);
+}
+
+/* ADD BOOKMARK WINDOW */
+
+.BookmarkPopup .dialog-header { /* BG COLOR OF HEADER IN BOOKMARK WINDOW */
+    background-color: transparent;
+} 
+
+.BookmarkPopup { /* BG COLOR OF WHOLE BOOKMARK WINDOW */
+    background-color: transparent;
+}
+
+.BookmarkInputField:focus-within { /* REMOVING ACTIVE UNDERLINE */
+    border-bottom-color: transparent;
+    box-shadow: none;
+}
+
+.BookmarkInputField { /* REMOVING REST UNDERLINES */
+    border-bottom: transparent;
+}
+
+.BookmarkPopup .button-toolbar > button { /* FIXING NEW FOLDER BUTTON PART 1 */
+    border: none;
+    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+.BookmarkLocationSelector-AddFolderButton > button { /* FIXING NEW FOLDER BUTTON PART 2 */
+    background-image: none;
+}
+
+.BookmarkPopup .button-toolbar > button:hover { /* FIXING HOVER OF NEW FOLDER BUTTON */
+    background-color: var(--colorBg);
+}
+
+.BookmarkPopup input { /* FIXING BG COLOR OF INPUTS */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+/* ALLOW SOMETHING WINDOW */
+
+.addressfield-popup-container .addressfield-popup .addressfield-popup-header, .addressfield-popup-container .addressfield-popup .dialog-footer { /* BG COLOR OF WHOLE ALLOW WINDOW */
+    background-color: transparent;
+    border-bottom: transparent;
+}
+
+.addressfield-popup-container input { /* FIXING BUTTONS */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+/* CONTENT BLOCKER WINDOW */
+
+#app .ContentBlocker-Header { /* REMOVING BORDER OF HEADER */
+    border-bottom: transparent;
+}
+
+button.privacy-btn-icon { /* FIXING PRIVACY BUTTON */
+    background-image: none;
+    border-color: transparent;
+    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+.ContentBlocker-Field input { /* FIXING MANAGE BUTTON */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+/* TRANSLATE WINDOW FROM ULR BAR */
+
+.TranslatePopup { /* FIXING BG COLOR OF UPPER PART */
+    background-color: transparent;
+}
+
+.button-popup.ToolbarButtonPopup-DefaultStyles footer { /* FIXING BG COLOR OF FOOTER PART */
+    background: transparent;
+    border-top: transparent;
+}
+
+.TranslatePopup input { /* FIXING TRANSLATE BUTTON */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+}
+
+.TranslatePopup-Buttons-MenuButton { /* FIXING OPTIONS BUTTON */
+    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    border-color: transparent;
 }
