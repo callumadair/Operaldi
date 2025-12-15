@@ -21,8 +21,10 @@ arc like pinned taby?
 */
 
 :root {
-    --lessTransparent: transparent 50%; /* TRANSPARENCY OF BROWSER - 50% */
-    --blur: blur(15px); /* BLUR OF BROWSER - 15px */
+    --lessTransparent: transparent 50%;
+    /* TRANSPARENCY OF BROWSER - 50% */
+    --blur: blur(15px);
+    /* BLUR OF BROWSER - 15px */
 }
 
 /* SETTINGS OF ALL INPUTS */
@@ -33,16 +35,25 @@ select:not(.sortselector-dropdown) {
     border-color: transparent;
 }
 
-input[type=button]:not(.circular), input[type=submit]:not(.circular), input[type=submit][type=submit] { /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
+input[type=button]:not(.circular),
+input[type=submit]:not(.circular),
+input[type=submit][type=submit] {
+    /* REMOVING BG IMAGE FROM BUTTONS IN MANY WINDOWS ETC */
     background-image: none;
 }
 
-input[type=button]:not(.circular).primary, input[type=submit]:not(.circular).primary, input[type=submit][type=submit] { /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary,
+input[type=submit]:not(.circular).primary,
+input[type=submit][type=submit] {
+    /* REMOVING UGLY COLORS FROM PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     border-color: transparent;
 }
 
-input[type=button]:not(.circular).primary:hover, input[type=submit]:not(.circular).primary:hover, input[type=submit][type=submit]:hover { /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
+input[type=button]:not(.circular).primary:hover,
+input[type=submit]:not(.circular).primary:hover,
+input[type=submit][type=submit]:hover {
+    /* REMOVING UGLY COLORS FROM HOVER OF PRIMARY BUTTON IN MANY WINDOWS ETC */
     color: var(--colorFg);
     background: var(--colorBg) !important;
     border-color: transparent;
@@ -53,8 +64,17 @@ input[type=button]:not(.circular).primary:hover, input[type=submit]:not(.circula
     /* REMOVING OUTLINE FROM FOCUSED SEARCH BAR */
 }
 
-input[type=tel], input[type=text], input[type=search], input[type=email], input[type=url], input[type=date], input[type=time], input[type=password], input[type=number] {
-    box-shadow: none; /* REMOVE SHADOW FROM SEARCH BAR */
+input[type=tel],
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=time],
+input[type=password],
+input[type=number] {
+    box-shadow: none;
+    /* REMOVE SHADOW FROM SEARCH BAR */
     border-color: transparent;
 }
 
@@ -132,6 +152,10 @@ input[type=checkbox]:after {
 }
 
 /* HEADER for when the MAINBAR is collapsed. */
+#browser {
+    padding-top: 0;
+}
+
 #browser:not(.is-settingspage):not(.address-top)>#header,
 #browser:not(.is-settingspage):not(.tabs-top) #header,
 #browser.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
@@ -149,7 +173,7 @@ input[type=checkbox]:after {
 /*topHeader-Win*/
 #browser.win:not(.is-settingspage):not(.address-top)>#header,
 #browser.win:not(.is-settingspage):not(.tabs-top) #header,
-#browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom) #header {
+#browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom)#browser:not(.address-top) #header {
     min-height: 30px !important;
     height: 30px !important;
     background: var(--colortabbar);
@@ -1451,105 +1475,127 @@ input[type=button]:not(.circular).danger.danger:hover {
 
 /* ADD BOOKMARK TO SPEED DIAL WINDOW */
 
-.startpage #modal-bg.startpage-drawer { /* BG COLOR OF WHOLE WINDOW */
+.startpage #modal-bg.startpage-drawer {
+    /* BG COLOR OF WHOLE WINDOW */
     background-color: color-mix(in srgb, color-mix(in srgb, var(--colorBg), var(--colorHighlightBg)), var(--lessTransparent));
     backdrop-filter: none;
 }
 
-.startpage #modal-bg.startpage-drawer section .SpeedDial { /* BG COLOR OF SITES */
+.startpage #modal-bg.startpage-drawer section .SpeedDial {
+    /* BG COLOR OF SITES */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     border-radius: var(--radius);
 }
 
-.startpage #modal-bg.startpage-drawer .FormButton { /* FIXING NEW FOLDER BUTTON */
+.startpage #modal-bg.startpage-drawer .FormButton {
+    /* FIXING NEW FOLDER BUTTON */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     border-color: transparent;
     background-image: none;
 }
 
-.startpage #modal-bg.startpage-drawer .FormButton:hover { /* FIXING HOVER OF NEW FOLDER BUTTON */
+.startpage #modal-bg.startpage-drawer .FormButton:hover {
+    /* FIXING HOVER OF NEW FOLDER BUTTON */
     background-color: var(--colorBg);
 }
 
 /* ADD BOOKMARK WINDOW */
 
-.BookmarkPopup .dialog-header { /* BG COLOR OF HEADER IN BOOKMARK WINDOW */
-    background-color: transparent;
-} 
-
-.BookmarkPopup { /* BG COLOR OF WHOLE BOOKMARK WINDOW */
+.BookmarkPopup .dialog-header {
+    /* BG COLOR OF HEADER IN BOOKMARK WINDOW */
     background-color: transparent;
 }
 
-.BookmarkInputField:focus-within { /* REMOVING ACTIVE UNDERLINE */
+.BookmarkPopup {
+    /* BG COLOR OF WHOLE BOOKMARK WINDOW */
+    background-color: transparent;
+}
+
+.BookmarkInputField:focus-within {
+    /* REMOVING ACTIVE UNDERLINE */
     border-bottom-color: transparent;
     box-shadow: none;
 }
 
-.BookmarkInputField { /* REMOVING REST UNDERLINES */
+.BookmarkInputField {
+    /* REMOVING REST UNDERLINES */
     border-bottom: transparent;
 }
 
-.BookmarkPopup .button-toolbar > button { /* FIXING NEW FOLDER BUTTON PART 1 */
+.BookmarkPopup .button-toolbar>button {
+    /* FIXING NEW FOLDER BUTTON PART 1 */
     border: none;
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.BookmarkLocationSelector-AddFolderButton > button { /* FIXING NEW FOLDER BUTTON PART 2 */
+.BookmarkLocationSelector-AddFolderButton>button {
+    /* FIXING NEW FOLDER BUTTON PART 2 */
     background-image: none;
 }
 
-.BookmarkPopup .button-toolbar > button:hover { /* FIXING HOVER OF NEW FOLDER BUTTON */
+.BookmarkPopup .button-toolbar>button:hover {
+    /* FIXING HOVER OF NEW FOLDER BUTTON */
     background-color: var(--colorBg);
 }
 
-.BookmarkPopup input { /* FIXING BG COLOR OF INPUTS */
+.BookmarkPopup input {
+    /* FIXING BG COLOR OF INPUTS */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 /* ALLOW SOMETHING WINDOW */
 
-.addressfield-popup-container .addressfield-popup .addressfield-popup-header, .addressfield-popup-container .addressfield-popup .dialog-footer { /* BG COLOR OF WHOLE ALLOW WINDOW */
+.addressfield-popup-container .addressfield-popup .addressfield-popup-header,
+.addressfield-popup-container .addressfield-popup .dialog-footer {
+    /* BG COLOR OF WHOLE ALLOW WINDOW */
     background-color: transparent;
     border-bottom: transparent;
 }
 
-.addressfield-popup-container input { /* FIXING BUTTONS */
+.addressfield-popup-container input {
+    /* FIXING BUTTONS */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 /* CONTENT BLOCKER WINDOW */
 
-#app .ContentBlocker-Header { /* REMOVING BORDER OF HEADER */
+#app .ContentBlocker-Header {
+    /* REMOVING BORDER OF HEADER */
     border-bottom: transparent;
 }
 
-button.privacy-btn-icon { /* FIXING PRIVACY BUTTON */
+button.privacy-btn-icon {
+    /* FIXING PRIVACY BUTTON */
     background-image: none;
     border-color: transparent;
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.ContentBlocker-Field input { /* FIXING MANAGE BUTTON */
+.ContentBlocker-Field input {
+    /* FIXING MANAGE BUTTON */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
 /* TRANSLATE WINDOW FROM ULR BAR */
 
-.TranslatePopup { /* FIXING BG COLOR OF UPPER PART */
+.TranslatePopup {
+    /* FIXING BG COLOR OF UPPER PART */
     background-color: transparent;
 }
 
-.button-popup.ToolbarButtonPopup-DefaultStyles footer { /* FIXING BG COLOR OF FOOTER PART */
+.button-popup.ToolbarButtonPopup-DefaultStyles footer {
+    /* FIXING BG COLOR OF FOOTER PART */
     background: transparent;
     border-top: transparent;
 }
 
-.TranslatePopup input { /* FIXING TRANSLATE BUTTON */
+.TranslatePopup input {
+    /* FIXING TRANSLATE BUTTON */
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
 }
 
-.TranslatePopup-Buttons-MenuButton { /* FIXING OPTIONS BUTTON */
-    background-color:  color-mix(in srgb, var(--colorBg), var(--lessTransparent));
+.TranslatePopup-Buttons-MenuButton {
+    /* FIXING OPTIONS BUTTON */
+    background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
     border-color: transparent;
 }
