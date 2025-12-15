@@ -173,9 +173,7 @@ input[type=checkbox]:after {
 /*topHeader-Win*/
 #browser.win:not(.is-settingspage):not(.address-top)>#header,
 #browser.win:not(.is-settingspage):not(.tabs-top) #header,
-#browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom)#browser:not(.address-top) #header {
-    min-height: 30px !important;
-    height: 30px !important;
+#browser.win.color-behind-tabs-off:not(.is-settingspage)#browser:not(.tabs-top):not(.tabs-bottom):not(.address-top) #header {
     background: var(--colortabbar);
     padding: 0px 0px 0px 0px;
     background-color: color-mix(in srgb, var(--colorBg), var(--lessTransparent));
@@ -216,7 +214,8 @@ input[type=checkbox]:after {
 }
 
 .disable-titlebar#browser.win .window-buttongroup button {
-    height: 44px; /* HEIGHT OF WINDOW BUTTONS */
+    height: 44px;
+    /* HEIGHT OF WINDOW BUTTONS */
 }
 
 .mainbar {
@@ -406,7 +405,8 @@ button.ToolbarButton-Button[name="TilingToggle"] {
 }
 
 .density-on:not(.tabs-at-edge) .tab.active:not(.tab-in-accordion, .tab-accordion) {
-    box-shadow: none; /* REMOVE SHADOW UNDER ACTIVE TAB */
+    box-shadow: none;
+    /* REMOVE SHADOW UNDER ACTIVE TAB */
 }
 
 .tabs-left .tab-audio,
