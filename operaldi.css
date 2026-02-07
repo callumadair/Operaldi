@@ -214,8 +214,13 @@ input[type=checkbox]:after {
 }
 
 .disable-titlebar#browser.win .window-buttongroup button {
-    height: 44px;
-    /* HEIGHT OF WINDOW BUTTONS */
+    height: calc(40px / var(--uiZoomLevel));
+    /* HEIGHT OF WINDOW BUTTONS - match mainbar height */
+}
+
+.window-buttongroup {
+    background-color: transparent !important;
+    /* Remove black background from window buttons container */
 }
 
 .mainbar {
@@ -321,6 +326,15 @@ button.ToolbarButton-Button[name="TilingToggle"] {
     background-color: var(--colorBg);
     /* HOVER OF WINDOW CLOSE BUTTON */
     fill: var(--colorFg);
+}
+
+#browser.win .window-buttongroup {
+    background-color: transparent !important;
+    backdrop-filter: none;
+}
+
+#browser.win .window-buttongroup button {
+    background-color: transparent;
 }
 
 #browser.win .window-buttongroup button.window-close {
